@@ -1,0 +1,26 @@
+********* TECh Stack **********
+- Node.js
+- Express.js
+- Socket IO (for real tym playing control)
+- chessJS Engine (for chess rule and regulation)
+
+
+********** Plan of execution **********
+
+1. Initialization
+    - socket and chess objects are initialized
+    - Board element is selected from from the DOM
+    -Initial value of Dragged place , source place and playing rule are set to null.
+
+2. Initial Board Rendering 
+    -renderBoard() is called to display the initial state of chessboard
+
+3. Drag and Drop functionality 
+    - renderBoard() sets uo drag-and-drop event listeners for each piece and square.
+    - pieces are draggable based on players role
+    - when a piece is Dragged , DraggedPiece and sourceSquare are set.
+    - When a piece is dropped , handlemove() is c called to handle the move logic an emit it to the server . 
+
+4. Socket Event Handling : 
+    - client 
+    - server
